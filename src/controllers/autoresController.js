@@ -9,7 +9,7 @@ class AutorController {
       res.status(200).json(autoresResultado);
       
   } catch (erro) {
-          res.status(500).json({ message: "Erro interno no servidor" });
+          res.status(500).json({ message: `${erro.message} - Erro interno no servidor` });
   }
   }
 
@@ -48,7 +48,7 @@ class AutorController {
   
         res.status(200).send({message: "Autor atualizado com sucesso"});
       } catch (erro) {
-        res.status(500).send({message: erro.message});
+        res.status(500).send({message: `${erro.message} - Erro ao atualizar`});
       }
     }
   
@@ -60,7 +60,7 @@ class AutorController {
   
         res.status(200).send({message: "Autor removido com sucesso"});
       } catch (erro) {
-        res.status(500).send({message: erro.message});
+        res.status(500).send({message: `${erro.message} - Erro ao excluir`});
       }
     }
   

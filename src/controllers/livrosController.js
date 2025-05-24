@@ -10,7 +10,7 @@ class LivroController {
 
       res.status(200).json(livrosResultado);
     } catch (erro) {
-      res.status(500).json({ message: "Erro interno no servidor" });
+      res.status(500).json({ message: `${erro.message} - Erro interno no servidor`});
     }
   }
 
@@ -72,7 +72,7 @@ class LivroController {
 
       res.status(200).send(livrosResultado);
     } catch (erro) {
-      res.status(500).json({ message: "Erro interno no servidor" });
+      res.status(500).json({ message: `${erro.message} - Erro interno no servidor`});
     }
   }
 
