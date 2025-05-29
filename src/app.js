@@ -18,7 +18,6 @@ app.use((req, res, next) => {
 routes(app);
 
 app.use(manipulador404);
-
 app.use(manipuladorDeErros);
 
 export default app;
